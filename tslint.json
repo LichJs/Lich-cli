@@ -1,3 +1,18 @@
 {
-  "extends": "@oclif/tslint"
+  "extends": "@oclif/tslint",
+  "globals": {
+    "require": true
+  },
+  "rules": {
+    "no-unused-variable": false,
+    "semicolon": [true, "always"],
+    "object-curly-spacing": [
+      true,
+      "always",
+      {
+        "objectsInObjects": true,
+        "arraysInObjects": true
+      }
+    ]
+  }
 }
