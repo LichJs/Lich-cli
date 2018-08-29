@@ -32,7 +32,7 @@ USAGE
 # Commands
 <!-- commands -->
 * [`Lich-cli help [COMMAND]`](#lich-cli-help-command)
-* [`Lich-cli new [PROJECT]`](#lich-cli-new-project)
+* [`Lich-cli init [PROJECT]`](#lich-cli-init-project)
 
 ## `Lich-cli help [COMMAND]`
 
@@ -51,13 +51,13 @@ OPTIONS
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.1.0/src/commands/help.ts)_
 
-## `Lich-cli new [PROJECT]`
+## `Lich-cli init [PROJECT]`
 
 descibe the command here.
 
 ```
 USAGE
-  $ Lich-cli new [PROJECT]
+  $ Lich-cli init [PROJECT]
 
 OPTIONS
   -f, --force
@@ -65,9 +65,9 @@ OPTIONS
   -n, --name=name  name to print
 
 EXAMPLE
-  $ Lich-cli new
-  new project from ./src/new.ts!
+  $ Lich-cli init
+  new project from ./src/init.ts!
 ```
 
-_See code: [src/commands/new.ts](https://github.com/dmoosocool/Lich-cli/blob/v0.0.0/src/commands/new.ts)_
+_See code: [src/commands/init.ts](https://github.com/dmoosocool/Lich-cli/blob/v0.0.0/src/commands/init.ts)_
 <!-- commandsstop -->

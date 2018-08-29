@@ -1,12 +1,12 @@
 import { Command, flags } from '@oclif/command';
 import * as inquirer from 'inquirer';
 
-export default class New extends Command {
-  static description = 'descibe the command here.';
+export default class Init extends Command {
+  static description = 'init a Lich.js boilerplate from github.';
 
   static examples = [
-    `$ Lich-cli new
-new project from ./src/new.ts!`
+    `$ Lich-cli init
+new project from ./src/init.ts!`
   ];
 
   static flags = {
@@ -18,7 +18,7 @@ new project from ./src/new.ts!`
   static args = [{ name: 'project' }];
 
   async run() {
-    const { args, flags } = this.parse(New);
+    const { args, flags } = this.parse(Init);
     const name = flags.name || 'world';
     this.log(name);
     let questions = [
