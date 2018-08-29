@@ -31,28 +31,8 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`Lich-cli hello [FILE]`](#lich-cli-hello-file)
 * [`Lich-cli help [COMMAND]`](#lich-cli-help-command)
 * [`Lich-cli new [PROJECT]`](#lich-cli-new-project)
-
-## `Lich-cli hello [FILE]`
-
-describe the command here
-
-```
-USAGE
-  $ Lich-cli hello [FILE]
-
-OPTIONS
-  -f, --folder=folder  set your workspace fold.
-  -h, --help           show CLI help
-
-EXAMPLE
-  $ Lich-cli hello
-  hello world from ./src/hello.ts!
-```
-
-_See code: [src/commands/hello.ts](https://github.com/dmoosocool/Lich-cli/blob/v0.0.0/src/commands/hello.ts)_
 
 ## `Lich-cli help [COMMAND]`
 

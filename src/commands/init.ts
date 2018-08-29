@@ -1,4 +1,5 @@
 import { Command, flags } from '@oclif/command';
+import * as inquirer from 'inquirer';
 
 export default class New extends Command {
   static description = 'descibe the command here.';
@@ -19,10 +20,15 @@ new project from ./src/new.ts!`
   async run() {
     const { args, flags } = this.parse(New);
     const name = flags.name || 'world';
-    this.log(`hello ${name} from ./src/commands/new.ts`);
-    this.log(args.project);
-    if (args.project && flags.force) {
-      this.log(`you input --force and --file: ${args.project}`);
-    }
+    this.log(name);
+    let questions = [
+      {
+        type: 'input',
+        name: 'projectName',
+        message: 'what\'s your project name?',
+        default: args.project
+      }
+    ];
+    inquirer.prompt(questions);
   }
 }
