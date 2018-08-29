@@ -33,6 +33,7 @@ USAGE
 <!-- commands -->
 * [`Lich-cli hello [FILE]`](#lich-cli-hello-file)
 * [`Lich-cli help [COMMAND]`](#lich-cli-help-command)
+* [`Lich-cli new [PROJECT]`](#lich-cli-new-project)
 
 ## `Lich-cli hello [FILE]`
 
@@ -43,9 +44,8 @@ USAGE
   $ Lich-cli hello [FILE]
 
 OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+  -f, --folder=folder  set your workspace fold.
+  -h, --help           show CLI help
 
 EXAMPLE
   $ Lich-cli hello
@@ -70,4 +70,24 @@ OPTIONS
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.1.0/src/commands/help.ts)_
+
+## `Lich-cli new [PROJECT]`
+
+descibe the command here.
+
+```
+USAGE
+  $ Lich-cli new [PROJECT]
+
+OPTIONS
+  -f, --force
+  -h, --help       show CLI help
+  -n, --name=name  name to print
+
+EXAMPLE
+  $ Lich-cli new
+  new project from ./src/new.ts!
+```
+
+_See code: [src/commands/new.ts](https://github.com/dmoosocool/Lich-cli/blob/v0.0.0/src/commands/new.ts)_
 <!-- commandsstop -->
