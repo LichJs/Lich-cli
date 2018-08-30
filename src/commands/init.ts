@@ -1,6 +1,5 @@
 import { Command, flags } from '@oclif/command';
 import * as inquirer from 'inquirer';
-
 export default class Init extends Command {
   static description = 'init a Lich.js boilerplate from github.';
 
@@ -11,7 +10,7 @@ new project from ./src/init.ts!`
 
   static flags = {
     help: flags.help({ char: 'h' }),
-    name: flags.string({ char: 'n', description: 'name to print' }),
+    name: flags.string({ char: 'n', description: 'set your project name.' }),
     force: flags.boolean({ char: 'f' })
   };
 
@@ -25,10 +24,24 @@ new project from ./src/init.ts!`
       {
         type: 'input',
         name: 'projectName',
-        message: 'what\'s your project name?',
+        message: 'set your porject name',
         default: args.project
+      },
+      {
+        type: 'input',
+        name: 'projectPort',
+        message: 'set your project prot',
+        validate: (input: string) => {
+          let reg = /\d\.\d\.\d/;
+          if (reg.test(input)) {
+            return true;
+          }
+          return 'please set version number';
+        },
+        default: '0.0.1'
       }
     ];
-    inquirer.prompt(questions);
+    let answers = await inquirer.prompt(questions);
+    this.log(JSON.stringify(answers));
   }
 }
